@@ -1,0 +1,52 @@
+2014/07/16 18:40:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "paypal/prepare".' in /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CWebApplication.php(141): CWebApplication->runController('paypal/prepare')
+#1 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/vagrant/projects/Payum/PayumYiiSandbox/demos/payum/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=paypal/prepare
+HTTP_REFERER=http://dev.payum-yii-sandbox.com/
+---
+2014/08/01 18:53:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "paypal/prepare".' in /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CWebApplication.php(141): CWebApplication->runController('paypal/prepare')
+#1 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/vagrant/projects/Payum/PayumYiiSandbox/demos/payum/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=paypal/prepare
+HTTP_REFERER=http://dev.payum-yii-sandbox.com/
+---
+2014/08/01 18:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "paypal/prepare".' in /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CWebApplication.php(141): CWebApplication->runController('paypal/prepare')
+#1 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/vagrant/projects/Payum/PayumYiiSandbox/demos/payum/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=paypal/prepare
+HTTP_REFERER=http://dev.payum-yii-sandbox.com/
+---
+2014/08/01 20:33:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "paypal/prepare".' in /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CWebApplication.php(141): CWebApplication->runController('paypal/prepare')
+#1 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/vagrant/projects/Payum/PayumYiiSandbox/demos/payum/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=paypal/prepare
+HTTP_REFERER=http://dev.payum-yii-sandbox.com/
+---
+2014/08/01 20:56:36 [error] [exception.Payum\Core\Exception\InvalidArgumentException] exception 'Payum\Core\Exception\InvalidArgumentException' with message 'Payum payment named paypal does not exist.' in /home/vagrant/projects/Payum/PayumYiiSandbox/demos/payum/protected/extensions/PayumYiiExtension/vendor/payum/core/Payum/Core/Registry/AbstractRegistry.php:96
+Stack trace:
+#0 /home/vagrant/projects/Payum/PayumYiiSandbox/demos/payum/protected/extensions/PayumYiiExtension/vendor/payum/core/Payum/Core/Registry/SimpleRegistry.php(18): Payum\Core\Registry\AbstractRegistry->getPayment('paypal')
+#1 /home/vagrant/projects/Payum/PayumYiiSandbox/demos/payum/protected/extensions/PayumYiiExtension/vendor/payum/payum-yii-extension/src/Payum/YiiExtension/PaymentController.php(22): Payum\Core\Registry\SimpleRegistry->getPayment('paypal')
+#2 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/actions/CInlineAction.php(49): Payum\YiiExtension\PaymentController->actionCapture()
+#3 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CWebApplication.php(282): CController->run('capture')
+#7 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/web/CWebApplication.php(141): CWebApplication->runController('payment/capture')
+#8 /home/vagrant/projects/Payum/PayumYiiSandbox/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /home/vagrant/projects/Payum/PayumYiiSandbox/demos/payum/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=payment/capture&payum_token=uTVZQIsJJhDYZDHj7asMegsqfzidwYyKcShxnX7aG9I
+HTTP_REFERER=http://dev.payum-yii-sandbox.com/
+---
