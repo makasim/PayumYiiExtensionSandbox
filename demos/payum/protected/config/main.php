@@ -4,7 +4,6 @@ Yii::setPathOfAlias('Payum', dirname(__FILE__).'/../extensions/PayumYiiExtension
 Yii::setPathOfAlias('Payum.YiiExtension', Yii::getPathOfAlias('Payum').'/payum/payum-yii-extension/src/Payum/YiiExtension');
 Yii::import('Payum.autoload', true);
 
-use Buzz\Client\Curl;
 use Payum\Core\Storage\FilesystemStorage;
 use Payum\Paypal\ExpressCheckout\Nvp\Api;
 use Payum\Paypal\ExpressCheckout\Nvp\PaymentFactory as PaypalEcPaymentFactory;
@@ -93,13 +92,13 @@ return array(
             'class' => '\Payum\YiiExtension\PayumComponent',
             'tokenStorage' => new FilesystemStorage(__DIR__.'/../data', 'PaymentSecurityToken', 'hash'),
             'payments' => array(
-//                'paypal_ec' => PaypalEcPaymentFactory::create(new Api(new Curl(), array(
+//                'paypal_ec' => PaypalEcPaymentFactory::create(new Api(array(
 //                    'username' => 'REPLACE WITH YOURS',
 //                    'password' => 'REPLACE WITH YOURS',
 //                    'signature' => 'REPLACE WITH YOURS',
 //                    'sandbox' => true
 //                )))
-                'paypal_ec' => PaypalEcPaymentFactory::create(new Api(new Curl(), array(
+                'paypal_ec' => PaypalEcPaymentFactory::create(new Api(array(
                     'username' => 'testrj_1312968849_biz_api1.remixjobs.com',
                     'password' => '1312968888',
                     'signature' => 'Azgw.f7NYjBAlDQEpbI1D06D4ACAAXfoVSV7k4JUuGAPRHzhDbQR2r90',

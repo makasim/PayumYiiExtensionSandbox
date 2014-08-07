@@ -1,6 +1,6 @@
 {
     "require": {
-        "payum/payum-yii-extension": "0.9.*",
-        "payum/paypal-express-checkout-nvp": "0.9.*"
+        "payum/payum-yii-extension": "0.11.*@dev",
+        "payum/payum": "0.11.*@dev"
     }
 }
