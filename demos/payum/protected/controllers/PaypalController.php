@@ -13,10 +13,10 @@ class PaypalController extends CController
             $paymentName
         );
 
-        $details = $storage->createModel();
+        $details = $storage->create();
         $details['PAYMENTREQUEST_0_CURRENCYCODE'] = 'USD';
         $details['PAYMENTREQUEST_0_AMT'] = 1.23;
-        $storage->updateModel($details);
+        $storage->update($details);
 
         $captureToken = $payum->getTokenFactory()->createCaptureToken($paymentName, $details, 'paypal/done');
 
@@ -32,7 +32,7 @@ class PaypalController extends CController
         $payment->execute($status);
 
         echo CHtml::tag('h3', array(), 'Payment status is ' . $status->getValue());
-        echo CHtml::tag('pre', array(), json_encode(iterator_to_array($status->getModel()), JSON_PRETTY_PRINT));
+        echo CHtml::tag('pre', array(), json_encode(iterator_to_array($status->getFirstModel()), JSON_PRETTY_PRINT));
         Yii::app()->end();
     }
 

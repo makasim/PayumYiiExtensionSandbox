@@ -5,14 +5,15 @@ Yii::setPathOfAlias('Payum.YiiExtension', Yii::getPathOfAlias('Payum').'/payum/p
 Yii::import('Payum.autoload', true);
 
 use Payum\Core\Storage\FilesystemStorage;
-use Payum\Paypal\ExpressCheckout\Nvp\Api;
-use Payum\Paypal\ExpressCheckout\Nvp\PaymentFactory as PaypalEcPaymentFactory;
 
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+
+$paypalExpressCheckoutPaymentFactory = new \Payum\Paypal\ExpressCheckout\Nvp\PaymentFactory();
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
@@ -92,18 +93,12 @@ return array(
             'class' => '\Payum\YiiExtension\PayumComponent',
             'tokenStorage' => new FilesystemStorage(__DIR__.'/../data', 'PaymentSecurityToken', 'hash'),
             'payments' => array(
-//                'paypal_ec' => PaypalEcPaymentFactory::create(new Api(array(
-//                    'username' => 'REPLACE WITH YOURS',
-//                    'password' => 'REPLACE WITH YOURS',
-//                    'signature' => 'REPLACE WITH YOURS',
-//                    'sandbox' => true
-//                )))
-                'paypal_ec' => PaypalEcPaymentFactory::create(new Api(array(
-                    'username' => 'testrj_1312968849_biz_api1.remixjobs.com',
-                    'password' => '1312968888',
-                    'signature' => 'Azgw.f7NYjBAlDQEpbI1D06D4ACAAXfoVSV7k4JUuGAPRHzhDbQR2r90',
+                'paypal_ec' => $paypalExpressCheckoutPaymentFactory->create(array(
+                    'username' => 'EDIT ME',
+                    'password' => 'EDIT ME',
+                    'signature' => 'EDIT ME',
                     'sandbox' => true
-                )))
+                )),
             ),
             'storages' => array(
                 'PaymentDetails' => new FilesystemStorage(__DIR__.'/../data', 'PaymentDetails', 'id'),
