@@ -1,7 +1,7 @@
 {
     "require": {
-        "payum/payum-yii-extension": "0.13.*@dev",
-        "payum/payum": "0.13.*",
-        "payum/omnipay-bridge": "0.13.*"
+        "payum/payum-yii-extension": "0.14.*@dev",
+        "payum/payum": "0.14.*",
+        "payum/omnipay-bridge": "0.14.*"
     }
 }
